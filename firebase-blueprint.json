@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Genre": {
+      "title": "Genre",
+      "description": "Kategori atau genre film",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Nama genre" }
+      },
+      "required": ["name"]
+    },
+    "Film": {
+      "title": "Film",
+      "description": "Data film",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "release_date": { "type": "string", "format": "date" },
+        "poster_url": { "type": "string" },
+        "trailer_url": { "type": "string" },
+        "genre_id": { "type": "string" },
+        "rating": { "type": "number" },
+        "director": { "type": "string" }
+      },
+      "required": ["title", "genre_id"]
+    }
+  },
+  "firestore": {
+    "/genres/{genreId}": {
+      "schema": "Genre",
+      "description": "Koleksi genre film"
+    },
+    "/films/{filmId}": {
+      "schema": "Film",
+      "description": "Koleksi film"
+    }
+  }
+}

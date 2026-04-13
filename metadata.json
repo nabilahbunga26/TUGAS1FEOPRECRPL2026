@@ -1,0 +1,5 @@
+{
+  "name": "Remix: Film Management System",
+  "description": "A comprehensive film management system for guests, users, and admins with reviews, watchlists, and genre management.",
+  "requestFramePermissions": []
+}
